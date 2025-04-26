@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vigil - Your Peace of Mind, On Your Wrist</title>
+  <meta name="description" content="Vigil is a wearable band that silently protects you in emergencies and assists you every day. Join the waitlist for early access." />
+  <link rel="icon" type="image/svg+xml" href="/vigil-favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background">
+    <div class="background-circle-1"></div>
+    <div class="background-circle-2"></div>
+    <div class="background-blur"></div>
+  </div>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-text">Vigil</span>
+      </div>
+      <button class="btn-primary" onclick="scrollToWaitlist()">Join the Waitlist</button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-icon">
+        <span class="hero-icon-ping"></span>
+        <span class="hero-icon-inner"></span>
+      </div>
+      <h1 class="hero-title">Your Peace of Mind,<br>On Your Wrist.</h1>
+      <p class="hero-subtitle">
+        Vigil is a wearable band that silently protects you in emergencies and assists you every day.
+      </p>
+      <div class="hero-cta">
+        <button class="btn-primary btn-large" onclick="scrollToWaitlist()">Join the Waitlist</button>
+        <p class="hero-cta-text">Get early access + launch rewards</p>
+      </div>
+    </section>
+
+    <section class="emotional-hook">
+      <h2 class="emotional-hook-title">When they fall...</h2>
+      <div class="divider"></div>
+      <p class="emotional-hook-subtitle">In moments when no one sees — Vigil does.</p>
+      <div class="pulse-indicator">
+        <span class="pulse-ring"></span>
+        <span class="pulse-dot"></span>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2 class="features-title">Protection. Peace of Mind. Confidence.</h2>
+      <div class="features-grid">
+        <div class="feature-card"><h3>SOS Swipe Alerts</h3><p>Discreetly alert loved ones with a 5-swipe trigger.</p></div>
+        <div class="feature-card"><h3>Real-Time Location Sharing</h3><p>Let them know you're safe — or not.</p></div>
+        <div class="feature-card"><h3>Wellness Reminders</h3><p>Stay on top of medications and health routines.</p></div>
+        <div class="feature-card"><h3>Fall Detection</h3><p>Automatic alerts when unexpected movements occur.</p></div>
+        <div class="feature-card"><h3>Durable & Flexible Build</h3><p>Shock-resistant body designed for everyday wear and accidents.</p></div>
+        <div class="feature-card"><h3>Always-On Display</h3><p>Quick glance access to your safety status and notifications.</p></div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="quote-container">
+        <p class="quote-text">"It's not just about emergencies.<br> It's about knowing someone will<br><span class="accent">always know</span>."</p>
+      </div>
+    </section>
+
+    <section class="waitlist" id="waitlist-form">
+      <div class="waitlist-content">
+        <h2 class="waitlist-title">Be First to Wear the Future of Safety</h2>
+        <p class="waitlist-subtitle">Join our exclusive waitlist for early access and special perks.</p>
+        <form id="waitlistForm" class="waitlist-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="interest">Why are you interested?</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select a reason</option>
+              <option value="Safety">Personal Safety</option>
+              <option value="Elder Care">Elder Care</option>
+              <option value="Wellness">Wellness Tracking</option>
+              <option value="Travel">Travel Safety</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-error" id="formError"></div>
+          <button type="submit" class="btn-primary btn-large" id="submitButton">Join Us</button>
+          <p class="form-subtext">Early access. Exclusive perks. Peace of mind.</p>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+          <h3>You're on the list!</h3>
+          <p>Thank you for joining the Vigil waitlist. We'll be in touch soon with exclusive updates.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo"><span class="logo-text">Vigil</span></div>
+      <p class="footer-tagline">Built by those who believe safety should feel like confidence — not fear.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Vigil Care. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function scrollToWaitlist() {
+      document.getElementById('waitlist-form').scrollIntoView({ behavior: 'smooth' });
+    }
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
