@@ -24,6 +24,11 @@ body {
   min-height: 100vh;
 }
 
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 80rem;
   margin: 0 auto;
@@ -188,72 +193,6 @@ body {
   animation: slideUp 0.5s ease-out;
 }
 
-/* Emotional Hook Section */
-.emotional-hook {
-  padding: 5rem 0;
-  text-align: center;
-  max-width: 48rem;
-  margin: 0 auto;
-}
-
-.emotional-hook-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  min-height: 9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.divider {
-  width: 100%;
-  max-width: 24rem;
-  height: 1px;
-  margin: 0 auto;
-  background: linear-gradient(to right, transparent, var(--color-accent), transparent);
-}
-
-.emotional-hook-subtitle {
-  font-size: 1.5rem;
-  color: var(--color-mist);
-  margin-top: 2rem;
-}
-
-.pulse-indicator {
-  position: relative;
-  width: 4rem;
-  height: 4rem;
-  margin: 1.5rem auto 0;
-}
-
-.pulse-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  opacity: 0.2;
-  animation: ping 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-.pulse-dot {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background-color: rgba(59, 130, 246, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pulse-dot::after {
-  content: '';
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-}
-
 /* Features Section */
 .features {
   padding: 4rem 0;
@@ -297,12 +236,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .feature-icon i {
   width: 1.5rem;
   height: 1.5rem;
-  color: var(--color-white);
 }
 
 .feature-card h3 {
@@ -494,12 +433,6 @@ body {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .footer-main {
   max-width: 24rem;
 }
@@ -598,6 +531,13 @@ body {
 @keyframes spin-reverse {
   from { transform: rotate(360deg); }
   to { transform: rotate(0deg); }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 640px) {
